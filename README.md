@@ -1,8 +1,8 @@
-** Custom AI Chatbot
+** Custom AI chatbot
 
-This project is a custom AI chatbot built using traditional machine learning techniques and fine-tuning with TF-IDF and Logistic Regression. It demonstrates how to build a question-answering bot trained on a user-defined dataset (dataset.json) with a simple and clean web interface built using Django.
+This project is a custom-built AI chatbot that responds to user queries based on a domain-specific dataset. It uses TF-IDF vectorization and Logistic Regression for text classification, allowing the chatbot to understand user questions and return appropriate answers.
 
-* How It Works-
+* How It Works
 Text Similarity Matching:
 
 User input is transformed into a vector using TF-IDF (Term Frequency-Inverse Document Frequency).
@@ -17,19 +17,26 @@ Uses Logistic Regression to classify the input if needed.
 
 Especially helpful when the dataset grows or becomes more diverse.
 
-
-Technologies Used-
+* Technologies Used
 Python
 
-Scikit-learn
+Scikit-learn (for ML model)
 
-Django (can be replaced with Flask if needed)
+TF-IDF (for text feature extraction)
 
-JSON (for training data)
+Logistic Regression
 
-* Fine tuning-
+Django (for web interface)
 
+* You can replace Django with Flask for simpler setups.
+
+* Fine-tuning
 We trained the model once using fine_tune.py, and saved the trained model and vectorizer as model.pkl. Now, whenever the chatbot runs, it loads the pre-trained model instantly, resulting in:
+Training the model (TF-IDF + Logistic Regression) once on the dataset.
+
+Saving the model (model.pkl) for fast reuse.
+
+Eliminates the need to re-train the model every time, improving performance.
 
 Faster responses
 
@@ -37,8 +44,10 @@ Improved accuracy
 
 Efficient performance
 
-Flask Alternative-
+* Flask Alternative
 If you prefer Flask instead of Django, the chatbot logic (bot.py) is modular and can easily be integrated into a Flask web application using routes and templates.
+
+
 
 ![Screenshot (53)](https://github.com/user-attachments/assets/e3040169-5e37-4ac4-80e4-29bb354ca50b)
 
