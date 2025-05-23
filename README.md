@@ -11,11 +11,9 @@ The chatbot calculates cosine similarity between the user input and the dataset 
 
 The most similar question is identified, and the corresponding answer is returned.
 
-**Classification Layer (Optional):
+** JSON format dataset
 
-Uses Logistic Regression to classify the input if needed.
-
-Especially helpful when the dataset grows or becomes more diverse.
+The chatbot relies on a structured dataset saved in a simple JSON format, designed to pair each user question with an appropriate bot answer. 
 
 * Technologies Used-
   
@@ -28,8 +26,6 @@ TF-IDF (for text feature extraction)
 Logistic Regression
 
 Django (for web interface)
-
-** You can replace Django with Flask for simpler setups.
 
 * Fine-tuning-
   
