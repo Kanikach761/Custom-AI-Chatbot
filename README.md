@@ -2,8 +2,8 @@
 
 This project is a custom-built AI chatbot that responds to user queries based on a domain-specific dataset. It uses TF-IDF vectorization and Logistic Regression for text classification, allowing the chatbot to understand user questions and return appropriate answers.
 
-* How It Works
-Text Similarity Matching:
+* How It Works-
+**Text Similarity Matching:
 
 User input is transformed into a vector using TF-IDF (Term Frequency-Inverse Document Frequency).
 
@@ -11,13 +11,14 @@ The chatbot calculates cosine similarity between the user input and the dataset 
 
 The most similar question is identified, and the corresponding answer is returned.
 
-Classification Layer (Optional):
+**Classification Layer (Optional):
 
 Uses Logistic Regression to classify the input if needed.
 
 Especially helpful when the dataset grows or becomes more diverse.
 
-* Technologies Used
+* Technologies Used-
+  
 Python
 
 Scikit-learn (for ML model)
@@ -28,9 +29,10 @@ Logistic Regression
 
 Django (for web interface)
 
-* You can replace Django with Flask for simpler setups.
+** You can replace Django with Flask for simpler setups.
 
-* Fine-tuning
+* Fine-tuning-
+  
 We trained the model once using fine_tune.py, and saved the trained model and vectorizer as model.pkl. Now, whenever the chatbot runs, it loads the pre-trained model instantly, resulting in:
 Training the model (TF-IDF + Logistic Regression) once on the dataset.
 
@@ -44,7 +46,8 @@ Improved accuracy
 
 Efficient performance
 
-* Flask Alternative
+* Flask Alternative-
+  
 If you prefer Flask instead of Django, the chatbot logic (bot.py) is modular and can easily be integrated into a Flask web application using routes and templates.
 
 
